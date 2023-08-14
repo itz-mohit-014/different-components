@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header , footer{
+    height: 15vh;
+    width: 100vw;
+    background: linear-gradient(to bottom , rgba(0,0,0,1), rgba(0,0,0,0.5));
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
+}
+footer{
+    margin-bottom: 0px;
+    
+}
+
+h1,h2,p{
+    text-align: center;
+    font-size: 60px;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, rgb(255, 103, 31), rgb(255, 255, 255), rgb(4, 106, 56));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    filter: drop-shadow(0px 10px 20px green);
+}
+
+h1{
+    background-image: linear-gradient(to right, rgb(255, 103, 31), rgb(255, 255, 255), rgb(4, 106, 56));
+
+}
+p{
+    font-size: 36px;
+}
+h2 > sup{
+    margin-left: -10px;
+    font-size: 26px;
+}
+
+@media screen and (max-width:767px){
+    h1,h2{
+        font-size: 40px;
+    }
+    p{
+        font-size: 26px;
+    }
+    .flag-container{
+        max-width: 300px;
+    }
+    .flag{
+        height: 65px;
+    }
+
+    .flag-pole{
+        height: 200px;
+    }
+}
+.flag-container{
+    position: relative;
+    width: 350px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;   
+}
+
+.flag-wrapper{
+    width: 100%;
+}
+.flag{
+    width: 100%;
+    height: 80px;
+    box-shadow: 4px 8px 20px 4px rgba(0, 0, 0, 0.4);
+    transform-origin: left;
+    animation: wavy-animation-flag 5s ease-in-out  infinite alternate ;
+}
+
+@keyframes wavy-animation-flag {
+    0%, 100%{
+        transform: scaleX(0.8) ;
+    }
+    50%{
+        transform:  scaleX(1) ;
+    }
+ 
+}
+
+.flag-wrapper > .orange{
+    background-color: rgb(255, 103, 31);
+}
+
+.flag-wrapper > .white{
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.flag-wrapper > .green{
+    background: rgb(4, 106, 56);
+}
+
+.chaker{
+    height: 100%;
+    width: 80px;
+    border: 3px solid rgb(0, 0, 128);
+    border-radius: 50%;
+    display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   position: relative;
+
+}
+.chaker > .chaker-lines{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 2px;
+    transform-origin: center;
+    background-color: rgb(0, 0, 128);
+    animation: line-rotate 2s linear infinite;
+}
+
+@keyframes line-rotate {
+        100%{
+            rotate: 360deg;
+        }
+}
+.chaker > .chaker-lines:nth-child(1){
+    transform: rotate(185deg) ;
+}
+.chaker > .chaker-lines:nth-child(2){
+    transform: rotate(15deg) ;
+
+}
+.chaker > .chaker-lines:nth-child(3){
+    transform: rotate(25deg) ;
+}
+.chaker > .chaker-lines:nth-child(4){
+    transform: rotate(35deg) ;
+}
+.chaker > .chaker-lines:nth-child(5){
+    transform: rotate(45deg) ;
+}
+.chaker > .chaker-lines:nth-child(6){
+    transform: rotate(55deg) ;
+}
+.chaker > .chaker-lines:nth-child(7){
+    transform: rotate(65deg) ;
+}
+.chaker > .chaker-lines:nth-child(8){
+    transform: rotate(75deg) ;
+}
+.chaker > .chaker-lines:nth-child(9){
+    transform: rotate(85deg) ;
+}
+.chaker > .chaker-lines:nth-child(10){
+    transform: rotate(95deg) ;
+}
+.chaker > .chaker-lines:nth-child(11){
+    transform: rotate(105deg) ;
+}
+.chaker > .chaker-lines:nth-child(12){
+    transform: rotate(115deg) ;
+}
+.chaker > .chaker-lines:nth-child(13){
+    transform: rotate(125deg) ;
+}
+.chaker > .chaker-lines:nth-child(14){
+    transform: rotate(135deg) ;
+}
+.chaker > .chaker-lines:nth-child(15){
+    transform: rotate(145deg) ;
+
+}
+.chaker > .chaker-lines:nth-child(16){
+    transform: rotate(155deg) ;
+}
+.chaker > .chaker-lines:nth-child(17){
+    transform: rotate(165deg) ;
+}
+.chaker > .chaker-lines:nth-child(18){
+    transform: rotate(175deg) ;
+}
+
+
+.flag-pole{
+    width: 20px;
+    height: 280px;
+    background-color: brown;
+    align-self: flex-start;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.flag-pole-holder{
+    width: 200px;
+    height: 100px;
+    /* border: 1px solid black; */
+    align-self: flex-start;
+    position: relative;
+    left: -25%;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    place-items: center;
+
+}
+
+.pole-holder-top , 
+.pole-holder-middle ,
+.pole-holder-bottom{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: gray;
+}
+
+.pole-holder-top {
+    width: 50%;
+}
+.pole-holder-middle {
+    width: 75%;
+}
+
+.person {
+    position: absolute;
+    bottom: 0px;
+    width: 240px;
+    height: 330px;
+
+}
+.person > img{
+    position: absolute;
+    bottom: -8px;
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+
+}
