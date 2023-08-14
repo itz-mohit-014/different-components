@@ -48,13 +48,15 @@ footer > .creator{
 
 @media screen and (max-width:767px){
     header ,footer {
-        height: 20vh;
+        height: fit-content;
+        padding: 1rem 8px;
     }
     h1,h2{
+      
         font-size: 40px;
     }
     p{
-        font-size: 26px;
+        font-size: 22px;
     }
     .flag-container{
         max-width: 300px;
