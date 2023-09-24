@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cal-container{
+    height:100vh;
+    width: 100%;
+    background: linear-gradient( to right, #c31432, #240b36 );
+}
+
+.age-cal-container{
+    background: rgb(255 255 255 / 0.3);
+    height:25rem;
+    max-height: 40rem;
+    width:90vw;
+    max-width: 400px;
+    padding:2rem;
+    justify-content: space-around;
+}
+
+.title{
+    color:#fff;
+    text-align: center;
+}
+.title h1, h3{
+    font: 600 clamp(1.8rem, 4vw ,2.2rem)/ 3rem  'cursive sans-serif';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title h3{
+    font-size: clamp(0.8rem, 4vw , 1.3rem );
+}
+.age-input-container {
+    width: 100%;
+}
+
+input, button{
+    width:100%;
+    padding:1rem;
+    font: 400 1.2rem sans-serif;
+    color:#eee ;
+    background-color: transparent;
+    border: none;
+    outline:3px solid #ddd;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+button{
+    max-width: 12rem;
+    background: linear-gradient(90deg, #f12711,  #f5af19 );
+    outline:none;
+    border: none;
+    margin-top:1.3rem ;
+}
+
+button:hover{
+    color: #fff;
+    animation: btn-color-rotate 0.5s linear forwards;
+}
+button:active{
+    scale: 0.95;
+}
+
+.calculated-age{
+    padding: 0.8rem 0px;
+    font: 400 clamp(1.2rem, 4vw ,1.5rem) serif;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes btn-color-rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(-180deg);
+    }
+    
+}
+
