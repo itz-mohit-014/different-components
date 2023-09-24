@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator - Calculate Your BMI</title>
+
+    <!-- Linking sytlesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="bg-color">
+      <div class="bmi-calculator-container flex-center">
+        <div class="title">
+          <h1>Body Mass Index ( BMI ) Calculator</h1>
+        </div>
+
+        <div class="input-values">
+          <div class="input-box flex-center">
+            <input
+              type="number"
+              name="heightInCm"
+              id="height"
+              autofocus
+              placeholder="Input Height in cm"
+            />
+          </div>
+
+          <div class="input-box flex-center">
+            <input
+              type="number"
+              name="weightInKg"
+              id="weight"
+              placeholder="Input weight in kg"
+            />
+          </div>
+        </div>
+
+        <div class="calculate-value">
+          <button type="button">Calculate BMI</button>
+
+          <div class="display flex-center">
+            <div class="bmi-value"></div>
+            <div class="wieght-condition">
+              <p>
+                Weight Condition :
+                <span class="bmi-status"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- linking script file -->
+    <script src="script.js"></script>
+  </body>
+</html>
